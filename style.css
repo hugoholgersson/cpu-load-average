@@ -1,0 +1,55 @@
+@import "https://code.highcharts.com/css/highcharts.css";
+
+/* TODO: Convert to Sass. */
+
+body {
+  background: #dbf3ff;
+  font-size: 14pt;
+}
+
+div { line-height: 2.5; }
+div h1, div h2 { line-height: 1; }
+
+div#content { width: 50%; margin: auto;}
+
+div#cpugraph {
+  height: 50%;
+}
+
+div#alertlog {
+  width: 100%;
+  height: 200px;
+  background: #bbf5c2;
+  overflow-y: scroll;
+  padding-left: 10px;
+  font-family: monospace;
+  font-size: x-small;
+}
+
+div#alertlog.alert {
+  background: #ff8282;
+}
+
+div#tip, div#localdemo {
+    font-size: smaller;
+}
+
+/*
+ Styling of HighCharts widget.
+*/
+
+.highcharts-background {
+  fill: #dbf3ff;
+}
+.highcharts-plot-background {
+  fill: white;
+}
+
+.highcharts-point {
+  fill: #ff8282;
+}
+
+.highcharts-point.zone-1,
+.highcharts-legend-item.highcharts-color-0 .highcharts-point {
+  fill: blue;
+}

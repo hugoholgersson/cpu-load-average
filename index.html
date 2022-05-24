@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CPU load</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+   <div id="content">
+    <h1>Average CPU load</h1>
+    <div id="cpugraph"></div>
+    <h2>Alert log:</h1>
+    <div id="alertlog"></div>
+    <div id="tip">Tip: <a href="https://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html">Learn</a> how to interpret Linux's load average values.</div>
+    <div id="localdemo">
+      <!-- TODO: Add control for sample frequency. -->
+      <!-- TODO: Add control for "overload" threshold. -->
+      <u>Demo:</u> Add extra CPU load (+higher sampling frequency and alert sensitivity)
+      <input type="range" min="0" max="100" value="0" id="slider"> +<span id="loadunits">0</span>
+    </div>
+   </div>
+  </body>
+</html>
+<script type="module" src="cpugraph.js"></script>
+<script type="module">
+  import { initCpuGraph, initDemoSlider} from './cpugraph.js';
+  window.addEventListener('load', () => {
+    initCpuGraph(
+        document.getElementById('cpugraph'),
+        document.getElementById('alertlog'),
+        Highcharts);
+    initDemoSlider(document.getElementById('slider'));
+  });
+</script>

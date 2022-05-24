@@ -1,0 +1,23 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "Simple HTML/CSS/ES6 web app demo, tested with Jest.",
+  "main": "cpugraph.js",
+  "type:": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node node_modules/.bin/jest"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom"
+  },
+  "author": "Hugo Holgersson",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-jest": "^28.1.0",
+    "eslint": "^8.15.0",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0"
+  }
+}
